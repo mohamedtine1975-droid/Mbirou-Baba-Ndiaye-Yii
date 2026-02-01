@@ -8,7 +8,17 @@ include 'database/user_db.php';
 
 <main>
     <!-- Contenu spécifique de la page -->
-    <h1>Bienvenue <?php echo getfullnameById($_SESSION['user_id']); ?> sur ma page</h1>
+   <h1>
+    Bienvenue 
+    <?php 
+    if (isset($_SESSION['user_id'])) {
+        echo htmlspecialchars(getfullnameById($_SESSION['user_id']));
+    } else {
+        echo "Invité";
+    }
+    ?> 
+    sur ma page
+</h1>
 </main>
 
 <?php include 'footer.php'; ?>

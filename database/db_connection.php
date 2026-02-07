@@ -13,7 +13,7 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,//retourne un tableau associatif
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];
-    //Crée l'objet $pdo qui sera utilisé dans tous les autres fichiers
+    //Crée l'objet $pdo qui sera utilisé dans tous les autres fichiers  
     $pdo = new PDO($dsn, $user, $password, $options);
 } catch (PDOException $e) {
     die("connexion echouée: " . $e->getMessage());

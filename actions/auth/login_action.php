@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($email) && !empty($password)) {
         // Vérifier les informations d'identification de l'utilisateur
-        $user = getUserByEmail($email);
-        if ($user) {
+        $user = getUserByEmail($email); 
+        if ($user) { 
             // Vérifier le mot de passe
             if (password_verify($password, $user['password'])) {
                 // Authentification réussie

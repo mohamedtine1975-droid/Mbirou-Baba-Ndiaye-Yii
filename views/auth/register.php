@@ -6,7 +6,7 @@ include '../../header.php';
 ?>
 <?php include '../../navbar.php';
 $errorMessage = $_SESSION['error'] ?? null;
-unset($_SESSION['error']);
+unset($_SESSION['error']); 
 ?>
 
 

@@ -1,5 +1,5 @@
 <?php 
-$index=true;
+$index=true;//pour indiquer que nous sommes sur la page d'accueil
 $pageTitle = "Accueil - Mon Site";
 include 'header.php'; 
 include 'database/user_db.php';

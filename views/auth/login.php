@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$login=true;
+$login=true; 
 $pageTitle = "Connexion - Mon Site";
 include '../../header.php';
 

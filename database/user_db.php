@@ -14,7 +14,7 @@ function registerUser($username, $firstname, $email, $password) {
     $sql = "INSERT INTO users (username, firstname, email, password) VALUES (:username, :firstname, :email, :password)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':firstname', $firstname);
+    $stmt->bindParam(':firstname', $firstname);//permet de lier une variable à un paramètre de la requête préparée
     $stmt->bindParam(':email', $email);
     // hashage du mot de passe avant de le stocker
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);

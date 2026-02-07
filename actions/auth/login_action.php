@@ -5,17 +5,15 @@ $pageTitle = "Connexion - Mon Site";
 include '../../header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupérer les données du formulaire
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     if (!empty($email) && !empty($password)) {
-        // Vérifier les informations d'identification de l'utilisateur
         $user = getUserByEmail($email); 
         if ($user) { 
-            // Vérifier le mot de passe
+            
             if (password_verify($password, $user['password'])) {
-                // Authentification réussie
+                
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 header('Location: /index.php');

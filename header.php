@@ -7,24 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        /* Force le body à prendre toute la hauteur */
+        
         html, body {
             height: 100%;
             margin: 0;
         }
         
-        /* Utilise Flexbox pour coller le footer en bas */
+        
         body {
             display: flex;
             flex-direction: column;
         }
         
-        /* Le main prend tout l'espace disponible */
+        
         main {
             flex: 1 0 auto;
         }
         
-        /* Le footer reste en bas */
+       
         footer {
             flex-shrink: 0;
         }

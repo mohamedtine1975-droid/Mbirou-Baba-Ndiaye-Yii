@@ -1,10 +1,13 @@
 <?php 
 $index=true;
 $pageTitle = "Accueil - Mon Site";
-include 'header.php'; 
-include 'database/user_db.php';
+session_start();
+require_once 'database/user_db.php';
+require_once 'database/produit_db.php';
+
+include 'header.php';
+include 'navbar.php'; 
 ?>
-<?php include 'navbar.php'; ?>
 
 <main>
     <!-- Contenu spécifique de la page -->
